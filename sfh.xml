@@ -188,6 +188,297 @@ opacity:0;transition: opacity .35s ease;}.about-author .author-avatar.lazy-yard{
 .label-size a.label-name {
   background: none !important;
 }
+
+
+/* ===================================================
+   ABOUT AUTHOR BOX - COMPACT & WIDE-TEXT LAYOUT
+   =================================================== */
+#about-author {
+  background-color: #f0f7ff;
+  border: 1px solid #c8ddfd;
+  border-left: 5px solid #0073e6;
+  border-radius: 8px;
+  padding: 10px 14px;              /* Tight padding: removes excess space below & above */
+  margin: 16px 0 10px;
+  display: flex;
+  align-items: center;            /* Perfectly centers image with bio text */
+  gap: 14px;                      /* Clean, compact gap between picture & text */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  box-sizing: border-box;
+}
+/* 1. Image Wrapper: Locks strictly to image width (Fixes huge blank space on right!) */
+#about-author > div:first-child {
+  flex: 0 0 auto !important;      /* Prevents image wrapper from taking 50% width */
+  width: auto !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  line-height: 0 !important;
+}
+/* 2. Author Avatar Image */
+#about-author img {
+  width: 80px !important;
+  height: 80px !important;
+  min-width: 80px !important;
+  max-width: 80px !important;
+  border-radius: 50% !important;
+  object-fit: cover !important;
+  object-position: 52% center !important;
+  border: 2px solid #ffffff !important;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15) !important;
+  display: block !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+/* 3. Text Container: Expands to fill 100% of remaining space (Not shrinked!) */
+#about-author > div:last-child {
+  flex: 1 1 auto !important;      /* Takes all available horizontal space */
+  min-width: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+/* 4. Section Label ("ABOUT THE AUTHOR") */
+#about-author h2,
+#about-author h3 {
+  margin: 0 0 2px 0 !important;
+  padding: 0 !important;
+  font-size: 11px !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.05em !important;
+  text-transform: uppercase !important;
+  color: #0073e6 !important;
+  background: transparent !important;
+  border: none !important;
+  line-height: 1.2 !important;
+}
+/* 5. Author Name Link */
+#about-author p:first-of-type {
+  margin: 0 0 3px 0 !important;
+  padding: 0 !important;
+  line-height: 1.3 !important;
+}
+#about-author p a,
+#about-author h3 a,
+#about-author h2 a {
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  color: #072b61 !important;
+  text-decoration: none !important;
+  display: inline-block !important;
+}
+#about-author p a:hover {
+  color: #0073e6 !important;
+  text-decoration: underline !important;
+}
+/* 6. Author Bio Text (Full width, crisp dark readable slate) */
+#about-author p:last-of-type {
+  font-size: 13px !important;
+  font-style: normal !important;
+  color: #334155 !important;
+  line-height: 1.45 !important;
+  margin: 0 !important;           /* Eliminates extra bottom space */
+  padding: 0 !important;
+  text-align: left !important;
+}
+#about-author p strong {
+  color: #072b61 !important;
+  font-weight: 600 !important;
+}
+/* Mobile: Compact stacked layout for small phones */
+@media (max-width: 480px) {
+  #about-author {
+    flex-direction: column !important;
+    text-align: center !important;
+    padding: 12px 10px !important;
+    gap: 8px !important;
+  }
+  #about-author p:last-of-type {
+    text-align: center !important;
+  }
+}
+
+/* Financial Disclaimer Box */
+aside h2 
+{
+  margin-top: 0  !important;
+  margin-bottom: 0 !important;
+  font-size: 14px !important;
+  font-weight: bold;
+  color: #802000; /* dark burnt orange for heading */
+}
+
+aside 
+{
+  background-color: #ffcc80; /* soft orange background */
+  border: 1px solid #d35400; /* lighter orange border */
+  border-radius: 8px;
+  padding: 6px 10px;
+  margin-top: 0  !important;
+  margin-bottom: 10px !important;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+aside p 
+{
+  font-size: 13px;
+  line-height: 1.3;
+  color: #333;
+  margin: 6px 0 0;
+  text-align: justify;
+}
+
+aside strong {
+  color: #d35400; /* bold orange emphasis */
+}
+
+main article h2 
+{
+  font-size: 18px;
+  font-weight: 700;
+  color: #cc5200; /* deep orange for emphasis */
+  margin: 18px 0 10px;
+  border-bottom: 3px solid #0073e6; /* underline accent */
+  border-top: 3px solid #0073e6; /* underline accent */  
+  padding-bottom: 4px;
+background-color: #b8cbff; /* soft orange header */  
+}
+
+main article h3 
+{
+  font-size: 16px;
+  font-weight: 600;
+  color: #0073e6 !important;
+  margin: 12px 0 6px;
+}
+
+main article table 
+{
+  width: 100%;
+  border-collapse: collapse;
+  margin: 10px 0;
+  font-size: 14px;
+}
+
+main article thead 
+{
+  background-color: #0007d4; /* soft orange header */
+
+}
+
+main article thead th 
+{
+  padding: 4px;
+  text-align: left;
+  border: 1px solid #ffcc80;
+  font-weight: 600;
+  color: #ffffff; /* dark burnt orange */
+}
+
+main article tbody td 
+{
+  padding: 4px;
+  border: 1px solid #ddd;
+  text-align: center;
+  color: #333;
+}
+
+main article tbody tr:nth-child(even) 
+{
+  background-color: #aac5f0; /* zebra striping */
+}
+
+main article tbody tr:hover 
+{
+  background-color: #4287f5; /* light orange hover */
+}
+main article ol {
+  margin: 12px 0 16px;
+  padding-left: 24px !important; /* indentation for list items */
+  font-size: 14px;
+  font-style: italic;
+  line-height: 1.5;
+  color: #333;
+}
+
+main article ol li {
+  margin: 10px 0;
+  padding: 8px 0;
+  border-left: 3px solid #4287f5; /* orange accent bar */
+  border-bottom: 2px solid #4287f5; /* orange accent bar */
+  padding-left: 10px !important;
+}
+
+main article ol li::marker {
+  font-weight: 600;
+  color: #cc5200; /* deep orange numbering */
+}
+
+main article ul {
+  margin: 12px 0 16px;
+  padding-left: 24px !important;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #333;
+}
+
+main article ul li {
+  margin: 10px 0;
+  padding: 8px 0;
+  border-left: 3px solid #4287f5; /* orange accent bar */
+  border-bottom: 2px solid #4287f5; /* orange accent bar */
+  padding-left: 10px !important;
+  list-style-type: square;
+}
+
+main article ul li::marker {
+  font-weight: 600;
+  color: #cc5200; /* deep orange bullet */
+}
+
+main article p {
+	text-align :  justify;
+	font-size: 14px !important; 
+}
+
+/* SFH Custom Blockquote & Callout Style */
+main article blockquote {
+  background: #f0f7ff;
+  border-left: 5px solid #2563eb;
+  border-right: 5px solid #2563eb;
+  border-top: 1px solid #cce0ff;
+  border-bottom: 1px solid #cce0ff;
+  border-radius: 6px;
+  padding: 16px 20px;
+  margin: 20px auto;
+  max-width: 85%;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.06);
+}
+
+main article blockquote p {
+  font-size: 15px !important;
+  font-style: italic !important;
+  font-weight: 600 !important;
+  color: #1e3a8a !important;
+  line-height: 1.6 !important;
+  margin: 0 !important;
+  text-align: center !important;
+}
+
+main article blockquote::before,
+main article blockquote::after {
+  display: none !important;
+}
+
+@media (max-width: 600px) {
+  main article blockquote {
+    max-width: 95%;
+    padding: 12px 14px;
+    margin: 16px auto;
+  }
+  main article blockquote p {
+    font-size: 14px !important;
+  }
+}
 		
 		]]></b:skin>
 		<style>
@@ -519,17 +810,19 @@ opacity:0;transition: opacity .35s ease;}.about-author .author-avatar.lazy-yard{
         <b:section class='top-bar-social social social-color' id='top-bar-social' maxwidgets='1' name='Social Top' showaddelement='yes'>
            <b:widget id='LinkList73' locked='true' title='Top Social Widget' type='LinkList' version='2' visible='true'>
              <b:widget-settings>
-               <b:widget-setting name='link-3'>#</b:widget-setting>
-               <b:widget-setting name='sorting'>NONE</b:widget-setting>
-               <b:widget-setting name='link-4'>#</b:widget-setting>
+               <b:widget-setting name='link-5'>https://www.linkedin.com/showcase/stock-forex-hub/</b:widget-setting>
+               <b:widget-setting name='link-3'>https://www.instagram.com/stockforexhub/</b:widget-setting>
+               <b:widget-setting name='link-4'>https://www.youtube.com/@WezenFx</b:widget-setting>
                <b:widget-setting name='text-1'>facebook</b:widget-setting>
-               <b:widget-setting name='link-1'>https://www.facebook.com/stockforexhub</b:widget-setting>
                <b:widget-setting name='text-0'>twitter</b:widget-setting>
-               <b:widget-setting name='link-2'>https://www.facebook.com/stockforexhub</b:widget-setting>
-               <b:widget-setting name='text-3'>pinterest</b:widget-setting>
-               <b:widget-setting name='link-0'>https://x.com/TradeSectionPK</b:widget-setting>
+               <b:widget-setting name='text-3'>instagram</b:widget-setting>
                <b:widget-setting name='text-2'>pinterest</b:widget-setting>
-               <b:widget-setting name='text-4'>instagram</b:widget-setting>
+               <b:widget-setting name='text-5'>linkedin</b:widget-setting>
+               <b:widget-setting name='text-4'>youtube</b:widget-setting>
+               <b:widget-setting name='sorting'>NONE</b:widget-setting>
+               <b:widget-setting name='link-1'>https://www.facebook.com/stockforexhub</b:widget-setting>
+               <b:widget-setting name='link-2'>https://www.pinterest.com/StockForexHub/</b:widget-setting>
+               <b:widget-setting name='link-0'>https://x.com/TradeSectionPK</b:widget-setting>
              </b:widget-settings>
              <b:includable id='main'>
               <b:include name='content'/>
@@ -604,7 +897,9 @@ opacity:0;transition: opacity .35s ease;}.about-author .author-avatar.lazy-yard{
           <b:section class='header-ads' id='header-ads' maxwidgets='1' name='Header Ads 728x90' showaddelement='yes'>
             <b:widget id='HTML1' locked='false' title='Header Ads Widget' type='HTML' visible='true'>
               <b:widget-settings>
-                <b:widget-setting name='content'><![CDATA[<a href='https://icmarkets.com/?camp=87747' target='_blank' rel='sponsored nofollow noopener'><img class='img-fluid' src='https://promo.icmarkets.com/Banners/2021/English/EN_970x90_Cellphon_FSA.jpg' width='970' height='90'/></a>]]></b:widget-setting>
+                <b:widget-setting name='content'><![CDATA[<a href="https://one.exnessonelink.com/intl/en/a/b300kzspjl">
+          <img src="https://d3dpet1g0ty5ed.cloudfront.net/EN_GLOBAL_C1_PRODUCTSUP_C2_T1_EXECUTION_MORE_T2_PERFORMANCE_D-3-13_STATIC_960x300_Q4_2025.jpg" width="960" height="300" alt="" />
+        </a>]]></b:widget-setting>
               </b:widget-settings>
               <b:includable id='main'>
   <b:include name='widget-title'/>
@@ -662,39 +957,49 @@ opacity:0;transition: opacity .35s ease;}.about-author .author-avatar.lazy-yard{
         <b:section class='main-menu' id='main-menu' maxwidgets='1' name='Main Menu / Dropdown / Multi Dropdown / Megamenu' showaddelement='yes'>
            <b:widget id='LinkList74' locked='true' title='Link List' type='LinkList' version='2' visible='true'>
              <b:widget-settings>
-               <b:widget-setting name='text-10'>Investing</b:widget-setting>
+               <b:widget-setting name='text-10'>Elliott Wave</b:widget-setting>
+               <b:widget-setting name='link-17'>https://www.stockforexhub.com/p/ghulam-muhiuddin.html</b:widget-setting>
+               <b:widget-setting name='link-16'>https://www.stockforexhub.com/p/our-team.html</b:widget-setting>
+               <b:widget-setting name='link-19'>#</b:widget-setting>
                <b:widget-setting name='sorting'>NONE</b:widget-setting>
-               <b:widget-setting name='link-1'>#</b:widget-setting>
-               <b:widget-setting name='link-13'>https://www.stockforexhub.com/p/ghulam-muhiuddin.html</b:widget-setting>
-               <b:widget-setting name='link-2'>#</b:widget-setting>
-               <b:widget-setting name='link-12'>https://www.stockforexhub.com/p/naveed-anjum.html</b:widget-setting>
-               <b:widget-setting name='link-15'>#</b:widget-setting>
+               <b:widget-setting name='link-18'>https://www.stockforexhub.com/p/naveed-anjum.html</b:widget-setting>
+               <b:widget-setting name='link-1'>/search/label/Forex</b:widget-setting>
+               <b:widget-setting name='link-13'>https://www.stockforexhub.com/p/zup-indicator.html</b:widget-setting>
+               <b:widget-setting name='link-2'>/search/label/EURUSD</b:widget-setting>
+               <b:widget-setting name='link-12'>https://www.stockforexhub.com/p/rsi-divergence-indicator.html</b:widget-setting>
+               <b:widget-setting name='link-15'>https://www.stockforexhub.com/p/demark-trendline.html</b:widget-setting>
                <b:widget-setting name='link-0'>/</b:widget-setting>
-               <b:widget-setting name='link-14'>#</b:widget-setting>
-               <b:widget-setting name='link-11'>https://www.stockforexhub.com/p/our-team.html</b:widget-setting>
-               <b:widget-setting name='link-10'>#</b:widget-setting>
-               <b:widget-setting name='text-9'>__RSI Divergence Strategy 01</b:widget-setting>
-               <b:widget-setting name='link-9'>#</b:widget-setting>
-               <b:widget-setting name='text-8'>_RSI Strategies</b:widget-setting>
-               <b:widget-setting name='link-7'>#</b:widget-setting>
-               <b:widget-setting name='link-8'>#</b:widget-setting>
-               <b:widget-setting name='link-5'>#</b:widget-setting>
-               <b:widget-setting name='link-6'>#</b:widget-setting>
-               <b:widget-setting name='link-3'>#</b:widget-setting>
-               <b:widget-setting name='link-4'>#</b:widget-setting>
-               <b:widget-setting name='text-1'>Features</b:widget-setting>
+               <b:widget-setting name='link-14'>https://www.stockforexhub.com/p/modified-donchian-channel.html</b:widget-setting>
+               <b:widget-setting name='link-11'>#</b:widget-setting>
+               <b:widget-setting name='link-10'>/search/label/Elliott%20Wave</b:widget-setting>
+               <b:widget-setting name='text-9'>Stocks</b:widget-setting>
+               <b:widget-setting name='link-9'>/search/label/Stocks</b:widget-setting>
+               <b:widget-setting name='text-8'>Crypto</b:widget-setting>
+               <b:widget-setting name='link-7'>/search/label/WTI%20CRUDE%20OIL</b:widget-setting>
+               <b:widget-setting name='text-20'>_Khalid Waheed</b:widget-setting>
+               <b:widget-setting name='link-8'>/search/label/BITCOIN</b:widget-setting>
+               <b:widget-setting name='link-5'>/search/label/Commodities</b:widget-setting>
+               <b:widget-setting name='link-6'>/search/label/GOLD</b:widget-setting>
+               <b:widget-setting name='link-3'>/search/label/GBPUSD</b:widget-setting>
+               <b:widget-setting name='link-4'>/search/label/USDCAD</b:widget-setting>
+               <b:widget-setting name='text-1'>Forex</b:widget-setting>
                <b:widget-setting name='text-0'>Home-icon</b:widget-setting>
-               <b:widget-setting name='text-3'>Trading Strategies</b:widget-setting>
-               <b:widget-setting name='text-2'>_Error Page</b:widget-setting>
-               <b:widget-setting name='text-5'>__Donchian Strategy 01</b:widget-setting>
-               <b:widget-setting name='text-4'>_Donchian Strategies</b:widget-setting>
-               <b:widget-setting name='text-7'>__Demark Strategy 01</b:widget-setting>
-               <b:widget-setting name='text-6'>_Demark Strategies</b:widget-setting>
-               <b:widget-setting name='text-15'>_Khalid Waheed</b:widget-setting>
-               <b:widget-setting name='text-11'>Analyst Panel</b:widget-setting>
-               <b:widget-setting name='text-12'>_Naveed Anjum</b:widget-setting>
-               <b:widget-setting name='text-13'>_Muhiuddin</b:widget-setting>
-               <b:widget-setting name='text-14'>_Nabi Ahmad Khan</b:widget-setting>
+               <b:widget-setting name='text-3'>_GBPUSD</b:widget-setting>
+               <b:widget-setting name='text-2'>_EURUSD</b:widget-setting>
+               <b:widget-setting name='text-5'>Commodities</b:widget-setting>
+               <b:widget-setting name='text-4'>_USDCAD</b:widget-setting>
+               <b:widget-setting name='text-7'>_Crude Oil</b:widget-setting>
+               <b:widget-setting name='text-6'>_Gold</b:widget-setting>
+               <b:widget-setting name='text-19'>_Nabi Ahmad Khan</b:widget-setting>
+               <b:widget-setting name='text-15'>_Demark Trendline </b:widget-setting>
+               <b:widget-setting name='text-16'>Analyst Panel</b:widget-setting>
+               <b:widget-setting name='text-17'>_Ghulam Muhiuddin</b:widget-setting>
+               <b:widget-setting name='text-18'>_Naveed Anjum</b:widget-setting>
+               <b:widget-setting name='text-11'>Indicators</b:widget-setting>
+               <b:widget-setting name='link-20'>#</b:widget-setting>
+               <b:widget-setting name='text-12'>_RSI Divergence</b:widget-setting>
+               <b:widget-setting name='text-13'>_ZUP</b:widget-setting>
+               <b:widget-setting name='text-14'>_Modified Donchian</b:widget-setting>
              </b:widget-settings>
              <b:includable id='main'>
               <b:include name='content'/>
@@ -740,15 +1045,11 @@ opacity:0;transition: opacity .35s ease;}.about-author .author-avatar.lazy-yard{
                 <b:widget-settings>
                   <b:widget-setting name='showDateHeader'>false</b:widget-setting>
                   <b:widget-setting name='commentLabel'>Comments</b:widget-setting>
-                  <b:widget-setting name='style.textcolor'>#ffffff</b:widget-setting>
                   <b:widget-setting name='showShareButtons'>true</b:widget-setting>
                   <b:widget-setting name='authorLabel'>Posted by:</b:widget-setting>
                   <b:widget-setting name='showCommentLink'>true</b:widget-setting>
-                  <b:widget-setting name='style.urlcolor'>#ffffff</b:widget-setting>
                   <b:widget-setting name='showAuthor'>false</b:widget-setting>
-                  <b:widget-setting name='style.linkcolor'>#ffffff</b:widget-setting>
                   <b:widget-setting name='style.unittype'>TextAndImage</b:widget-setting>
-                  <b:widget-setting name='style.bgcolor'>#ffffff</b:widget-setting>
                   <b:widget-setting name='timestampLabel'/>
                   <b:widget-setting name='reactionsLabel'/>
                   <b:widget-setting name='showAuthorProfile'>false</b:widget-setting>
@@ -759,7 +1060,6 @@ opacity:0;transition: opacity .35s ease;}.about-author .author-avatar.lazy-yard{
                   <b:widget-setting name='showTimestamp'>true</b:widget-setting>
                   <b:widget-setting name='postsPerAd'>1</b:widget-setting>
                   <b:widget-setting name='showBacklinks'>false</b:widget-setting>
-                  <b:widget-setting name='style.bordercolor'>#ffffff</b:widget-setting>
                   <b:widget-setting name='showInlineAds'>false</b:widget-setting>
                   <b:widget-setting name='showReactions'>false</b:widget-setting>
                 </b:widget-settings>
@@ -861,9 +1161,13 @@ opacity:0;transition: opacity .35s ease;}.about-author .author-avatar.lazy-yard{
             </b:includable>
                 <b:includable id='aboutPostAuthor'>
   <div class='author-name'>
-    <a class='g-profile' expr:href='data:post.author.profileUrl' rel='author' title='author profile'>
+ <a class='g-profile' expr:href='data:post.author.name == &quot;gm&quot; or data:post.author.name == &quot;octa&quot; ? &quot;https://www.stockforexhub.com/p/ghulam-muhiuddin.html&quot; : data:post.author.profileUrl' rel='author' title='author profile'>
       <span>
-        <data:post.author.name/>
+        <b:if cond='data:post.author.name == &quot;gm&quot; or data:post.author.name == &quot;octa&quot;'>
+          Ghulam Muhiuddin
+        <b:else/>
+          <data:post.author.name/>
+        </b:if>
       </span>
     </a>
   </div>
@@ -1105,6 +1409,8 @@ opacity:0;transition: opacity .35s ease;}.about-author .author-avatar.lazy-yard{
               <b:include data='post' name='postLabels'/>
               <b:include data='post' name='postShareButtons'/>
             </b:includable>
+                <b:includable id='googlePlusShare'>
+</b:includable>
                 <b:includable id='headerByline' var='post'>
               <!-- Post Header Meta -->
                 <div class='post-meta'>
@@ -1218,6 +1524,41 @@ opacity:0;transition: opacity .35s ease;}.about-author .author-avatar.lazy-yard{
   </a>
 </b:includable>
                 <b:includable id='post' var='post'>
+				<!-- Schema.org BlogPosting for Articles (E-E-A-T & YMYL) -->
+				<b:if cond='data:view.isPost'>
+					<script type='application/ld+json'>
+					{
+						&quot;@context&quot;: &quot;https://schema.org&quot;,
+						&quot;@type&quot;: &quot;BlogPosting&quot;,
+						&quot;mainEntityOfPage&quot;: {
+							&quot;@type&quot;: &quot;WebPage&quot;,
+							&quot;@id&quot;: &quot;<data:post.url.canonical/>&quot;
+						},
+						&quot;headline&quot;: &quot;<data:post.title.jsonEscaped/>&quot;,
+						<b:if cond='data:post.featuredImage'>
+						&quot;image&quot;: &quot;<data:post.featuredImage/>&quot;,
+						</b:if>
+						&quot;datePublished&quot;: &quot;<data:post.date.iso8601/>&quot;,
+						&quot;dateModified&quot;: &quot;<data:post.date.iso8601/>&quot;,
+						&quot;author&quot;: {
+							&quot;@type&quot;: &quot;Person&quot;,
+							&quot;name&quot;: &quot;Ghulam Muhiuddin&quot;,
+							&quot;alternateName&quot;: &quot;gm&quot;,
+							&quot;jobTitle&quot;: &quot;Senior Mentor, Professional Trader &amp; Technical Analyst&quot;,
+							&quot;url&quot;: &quot;https://www.stockforexhub.com/p/ghulam-muhiuddin.html&quot;
+						},
+						&quot;publisher&quot;: {
+							&quot;@type&quot;: &quot;Organization&quot;,
+							&quot;name&quot;: &quot;StockForexHub&quot;,
+							&quot;url&quot;: &quot;https://www.stockforexhub.com/&quot;,
+							&quot;logo&quot;: {
+								&quot;@type&quot;: &quot;ImageObject&quot;,
+								&quot;url&quot;: &quot;https://blogger.googleusercontent.com/img/a/AVvXsEiHJvOWmJyGx-M80sHET98yZyB04hXBestzUthnVstACcwgvWWeTIMVZo6FPB9ZzeFxuwXKlRDkjfLaQnVWlH2z-YFbOyzhlHCOdLWnulw9k_g9u1yQT3EBgznwt6-SsmiE929PlD1K37LTidinEWceBuL_fVrTLZHWrM2e_IZRncAu5zPyfo8RITQsIUID=s512&quot;
+							}
+						}
+					}
+					</script>
+				</b:if>
               <!-- Post Index -->
               <b:if cond='data:view.isMultipleItems'>
                 <b:include data='post' name='indexPost'/>
@@ -1227,6 +1568,23 @@ opacity:0;transition: opacity .35s ease;}.about-author .author-avatar.lazy-yard{
                 <b:include data='post' name='itemPost'/>
               </b:if>
             </b:includable>
+                <b:includable id='postAuthor'>
+  <span class='byline post-author vcard'>
+    <span class='post-author-label'>
+      <data:byline.label/>
+    </span>
+    <span class='fn'>
+      <b:if cond='data:post.author.profileUrl'>
+        <meta expr:content='data:post.author.profileUrl'/>
+        <a class='g-profile' expr:href='data:post.author.profileUrl' rel='author' title='author profile'>
+          <span><data:post.author.name/></span>
+        </a>
+      <b:else/>
+        <span><data:post.author.name/></span>
+      </b:if>
+    </span>
+  </span>
+</b:includable>
                 <b:includable id='postBody' var='post'> 
               <!-- Post Body Entry Content-->
               <div class='post-body post-content'>
@@ -1251,6 +1609,7 @@ opacity:0;transition: opacity .35s ease;}.about-author .author-avatar.lazy-yard{
                     &quot;name&quot;: &quot;<data:messages.home/>&quot;,
                     &quot;@id&quot;: &quot;<data:blog.homepageUrl.jsonEscaped/>&quot;
                   }
+                }
                 <b:if cond='data:post.labels'>,{
   &quot;@type&quot;: &quot;ListItem&quot;,
   &quot;position&quot;: 2,
@@ -1368,6 +1727,32 @@ opacity:0;transition: opacity .35s ease;}.about-author .author-avatar.lazy-yard{
                 <b:includable id='postMeta' var='post'>
               
             </b:includable>
+                <b:includable id='postMetadataJSONImage'>
+  &quot;image&quot;: {
+    &quot;@type&quot;: &quot;ImageObject&quot;,
+    <b:if cond='data:post.featuredImage.isResizable'>
+    &quot;url&quot;: &quot;<b:eval expr='resizeImage(data:post.featuredImage, 1200, &quot;1200:630&quot;)'/>&quot;,
+    &quot;height&quot;: 630,
+    &quot;width&quot;: 1200
+    <b:else/>
+    &quot;url&quot;: &quot;https://blogger.googleusercontent.com/img/b/U2hvZWJveA/AVvXsEgfMvYAhAbdHksiBA24JKmb2Tav6K0GviwztID3Cq4VpV96HaJfy0viIu8z1SSw_G9n5FQHZWSRao61M3e58ImahqBtr7LiOUS6m_w59IvDYwjmMcbq3fKW4JSbacqkbxTo8B90dWp0Cese92xfLMPe_tg11g/w1200/&quot;,
+    &quot;height&quot;: 348,
+    &quot;width&quot;: 1200
+    </b:if>
+  },
+</b:includable>
+                <b:includable id='postMetadataJSONPublisher'>
+ &quot;publisher&quot;: {
+    &quot;@type&quot;: &quot;Organization&quot;,
+    &quot;name&quot;: &quot;Blogger&quot;,
+    &quot;logo&quot;: {
+      &quot;@type&quot;: &quot;ImageObject&quot;,
+      &quot;url&quot;: &quot;https://blogger.googleusercontent.com/img/b/U2hvZWJveA/AVvXsEgfMvYAhAbdHksiBA24JKmb2Tav6K0GviwztID3Cq4VpV96HaJfy0viIu8z1SSw_G9n5FQHZWSRao61M3e58ImahqBtr7LiOUS6m_w59IvDYwjmMcbq3fKW4JSbacqkbxTo8B90dWp0Cese92xfLMPe_tg11g/h60/&quot;,
+      &quot;width&quot;: 206,
+      &quot;height&quot;: 60
+    }
+  },
+</b:includable>
                 <b:includable id='postNavigation' var='post'>
               <!-- Post Navigation Item -->
               <ul class='post-nav'>
@@ -1646,7 +2031,423 @@ opacity:0;transition: opacity .35s ease;}.about-author .author-avatar.lazy-yard{
         <b:section class='sidebar common-widget' id='sidebar1' name='Sidebar Right (A)' showaddelement='yes'>
           <b:widget id='HTML2' locked='false' title='' type='HTML' visible='true'>
             <b:widget-settings>
-              <b:widget-setting name='content'><![CDATA[<iframe src="https://secure.icmarkets.com//Partner/Widget/PriceWidgetWhite/87747" width="400" frameborder="0" height="480"></iframe>]]></b:widget-setting>
+              <b:widget-setting name='content'><![CDATA[<style>
+.ums-live-banner {
+    width: 370px;
+    height: 480px;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    position: relative;
+    background: #06152d;
+    border: 1px solid #1b4f86;
+    border-radius: 7px;
+    box-shadow: 0 4px 18px rgba(0,0,0,.35);
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ffffff;
+}
+
+.ums-live-head {
+    height: 66px;
+    box-sizing: border-box;
+    background: linear-gradient(135deg,#06152d,#0c376d);
+    border-bottom: 1px solid #20578e;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.ums-live-title {
+    font-size: 19px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.ums-live-status {
+    margin-top: 6px;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #39df7d;
+}
+
+.ums-live-dot {
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    margin-right: 6px;
+    background: #39df7d;
+    border-radius: 50%;
+    box-shadow: 0 0 8px #39df7d;
+}
+
+.ums-rate-area {
+    height: 374px;
+    overflow: hidden;
+    box-sizing: border-box;
+    padding: 7px 9px;
+}
+
+.ums-rate-row {
+    height: 34px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 9px;
+    margin-bottom: 4px;
+    background: #0a2140;
+    border: 1px solid #123b65;
+    border-radius: 4px;
+}
+
+.ums-rate-name {
+    width: 125px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #c4def5;
+    white-space: nowrap;
+}
+
+.ums-rate-price {
+    width: 125px;
+    text-align: right;
+    font-size: 14px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.ums-rate-change {
+    width: 65px;
+    text-align: right;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.ums-up {
+    color: #36df7b;
+}
+
+.ums-down {
+    color: #ff5c67;
+}
+
+.ums-neutral {
+    color: #a9bad0;
+}
+
+.ums-special {
+    color: #ffd45c;
+}
+
+.ums-footer {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 40px;
+    box-sizing: border-box;
+    background: linear-gradient(90deg,#0a376d,#0d5ca4,#0a376d);
+    border-top: 1px solid #2869a7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+
+.ums-footer a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: .7px;
+}
+
+.ums-footer a span {
+    color: #65eca0;
+    margin-left: 6px;
+}
+
+.ums-loading {
+    text-align: center;
+    padding-top: 125px;
+    color: #8db4dc;
+    font-size: 13px;
+}
+
+.ums-updated {
+    text-align: center;
+    color: #718dab;
+    font-size: 9px;
+    margin-top: 4px;
+}
+</style>
+
+<div class="ums-live-banner">
+
+    <div class="ums-live-head">
+        <div class="ums-live-title">FOREX &amp; MARKETS</div>
+        <div class="ums-live-status">
+            <span class="ums-live-dot"></span>LIVE MARKET RATES
+        </div>
+    </div>
+
+    <div class="ums-rate-area" id="umsRates">
+
+        <div class="ums-loading">
+            Loading live market rates...
+        </div>
+
+    </div>
+
+    <div class="ums-footer">
+        <a href="https://one.exnessonelink.com/intl/en/a/b300kzspjl"
+           target="_blank"
+           rel="noopener noreferrer">
+            OPEN DEMO ACCOUNT <span>↗</span>
+        </a>
+    </div>
+
+</div>
+
+<script>
+(function() {
+
+    var instruments = [
+        {symbol:"EURUSD", name:"EUR / USD"},
+        {symbol:"GBPUSD", name:"GBP / USD"},
+        {symbol:"USDJPY", name:"USD / JPY"},
+        {symbol:"USDCHF", name:"USD / CHF"},
+        {symbol:"AUDUSD", name:"AUD / USD"},
+        {symbol:"USDCAD", name:"USD / CAD"},
+        {symbol:"NZDUSD", name:"NZD / USD"},
+        {symbol:"XAUUSD", name:"XAU / USD GOLD", special:true},
+        {symbol:"BTCUSD", name:"BTC / USD", special:true},
+        {symbol:"USOIL", name:"US OIL", special:true}
+    ];
+
+    var rateBox = document.getElementById("umsRates");
+
+    function createRows() {
+
+        var html = "";
+
+        for (var i = 0; i < instruments.length; i++) {
+
+            var item = instruments[i];
+
+            html +=
+                '<div class="ums-rate-row">' +
+                    '<div class="ums-rate-name' + (item.special ? ' ums-special' : '') + '">' +
+                        item.name +
+                    '</div>' +
+                    '<div class="ums-rate-price" id="price-' + item.symbol + '">' +
+                        '---' +
+                    '</div>' +
+                    '<div class="ums-rate-change ums-neutral" id="change-' + item.symbol + '">' +
+                        '---' +
+                    '</div>' +
+                '</div>';
+
+        }
+
+        html += '<div class="ums-updated" id="umsUpdated">Updating live prices...</div>';
+
+        rateBox.innerHTML = html;
+    }
+
+    function formatPrice(symbol, price) {
+
+        if (price === null || price === undefined || isNaN(price)) {
+            return "---";
+        }
+
+        var n = Number(price);
+
+        if (symbol === "BTCUSD") {
+            return n.toLocaleString("en-US", {
+                minimumFractionDigits: 2,
+                maximumFractionDigits: 2
+            });
+        }
+
+        if (symbol === "XAUUSD") {
+            return n.toLocaleString("en-US", {
+                minimumFractionDigits: 2,
+                maximumFractionDigits: 2
+            });
+        }
+
+        if (symbol === "USOIL") {
+            return n.toLocaleString("en-US", {
+                minimumFractionDigits: 2,
+                maximumFractionDigits: 2
+            });
+        }
+
+        if (symbol === "USDJPY") {
+            return n.toFixed(3);
+        }
+
+        return n.toFixed(5);
+    }
+
+    function updateChange(symbol, value) {
+
+        var element = document.getElementById("change-" + symbol);
+
+        if (!element) {
+            return;
+        }
+
+        if (value === null || value === undefined || isNaN(value)) {
+            element.innerHTML = "---";
+            element.className = "ums-rate-change ums-neutral";
+            return;
+        }
+
+        var change = Number(value);
+
+        if (change > 0) {
+
+            element.innerHTML = "▲ " + Math.abs(change).toFixed(2) + "%";
+            element.className = "ums-rate-change ums-up";
+
+        } else if (change < 0) {
+
+            element.innerHTML = "▼ " + Math.abs(change).toFixed(2) + "%";
+            element.className = "ums-rate-change ums-down";
+
+        } else {
+
+            element.innerHTML = "— 0.00%";
+            element.className = "ums-rate-change ums-neutral";
+
+        }
+    }
+
+    async function loadRates() {
+
+        try {
+
+            var url =
+                "https://biquote.io/api/latest" +
+                "?symbols=EURUSD" +
+                "&symbols=GBPUSD" +
+                "&symbols=USDJPY" +
+                "&symbols=USDCHF" +
+                "&symbols=AUDUSD" +
+                "&symbols=USDCAD" +
+                "&symbols=NZDUSD" +
+                "&symbols=XAUUSD" +
+                "&symbols=BTCUSD" +
+                "&symbols=USOIL";
+
+            var response = await fetch(url, {
+                method: "GET",
+                cache: "no-store"
+            });
+
+            if (!response.ok) {
+                throw new Error("HTTP " + response.status);
+            }
+
+            var data = await response.json();
+
+            var records = Array.isArray(data) ? data : (data.data || data);
+
+            for (var i = 0; i < instruments.length; i++) {
+
+                var symbol = instruments[i].symbol;
+                var quote = null;
+
+                if (Array.isArray(records)) {
+
+                    for (var j = 0; j < records.length; j++) {
+
+                        if (
+                            records[j] &&
+                            (
+                                records[j].symbol === symbol ||
+                                records[j].Symbol === symbol
+                            )
+                        ) {
+
+                            quote = records[j];
+                            break;
+                        }
+
+                    }
+
+                } else if (records[symbol]) {
+
+                    quote = records[symbol];
+
+                }
+
+                if (!quote) {
+                    continue;
+                }
+
+                var price =
+                    quote.mid ??
+                    quote.price ??
+                    quote.last ??
+                    quote.close ??
+                    quote.bid;
+
+                var change =
+                    quote.dayDiffPercent ??
+                    quote.changePercent ??
+                    quote.change_pct ??
+                    quote.percentChange;
+
+                var priceElement = document.getElementById("price-" + symbol);
+
+                if (priceElement && price !== undefined) {
+                    priceElement.innerHTML = formatPrice(symbol, price);
+                }
+
+                updateChange(symbol, change);
+            }
+
+            var updated = document.getElementById("umsUpdated");
+
+            if (updated) {
+
+                var now = new Date();
+
+                updated.innerHTML =
+                    "Updated " +
+                    now.toLocaleTimeString([], {
+                        hour:"2-digit",
+                        minute:"2-digit",
+                        second:"2-digit"
+                    });
+
+            }
+
+        } catch (error) {
+
+            console.log("Live market API error:", error);
+
+            var updated = document.getElementById("umsUpdated");
+
+            if (updated) {
+                updated.innerHTML = "Live feed temporarily unavailable";
+            }
+
+        }
+
+    }
+
+    createRows();
+
+    loadRates();
+
+    setInterval(loadRates, 5000);
+
+})();
+</script>]]></b:widget-setting>
             </b:widget-settings>
             <b:includable id='main'>
   <b:include name='widget-title'/>
@@ -1909,20 +2710,20 @@ opacity:0;transition: opacity .35s ease;}.about-author .author-avatar.lazy-yard{
         <b:section class='foot-bar-social social social-color' id='foot-bar-social' maxwidgets='1' name='Social Footer' showaddelement='yes'>
            <b:widget id='LinkList78' locked='true' title='Footer Social Widget' type='LinkList' version='2' visible='true'>
              <b:widget-settings>
-               <b:widget-setting name='link-5'>#</b:widget-setting>
+               <b:widget-setting name='link-5'>https://www.linkedin.com/showcase/stock-forex-hub/</b:widget-setting>
                <b:widget-setting name='link-6'>#</b:widget-setting>
-               <b:widget-setting name='link-3'>https://www.instagram.com/livebloggerofficial/</b:widget-setting>
-               <b:widget-setting name='link-4'>https://www.youtube.com/liveblogger</b:widget-setting>
+               <b:widget-setting name='link-3'>https://www.instagram.com/stockforexhub/</b:widget-setting>
+               <b:widget-setting name='link-4'>https://www.youtube.com/@WezenFx</b:widget-setting>
                <b:widget-setting name='text-1'>facebook</b:widget-setting>
                <b:widget-setting name='text-0'>twitter</b:widget-setting>
                <b:widget-setting name='text-3'>instagram</b:widget-setting>
                <b:widget-setting name='text-2'>pinterest</b:widget-setting>
-               <b:widget-setting name='text-5'>https://www.linkedin.com/showcase/stock-forex-hub/</b:widget-setting>
+               <b:widget-setting name='text-5'>linkedin</b:widget-setting>
                <b:widget-setting name='text-4'>youtube</b:widget-setting>
                <b:widget-setting name='text-6'>pinterest</b:widget-setting>
                <b:widget-setting name='sorting'>NONE</b:widget-setting>
                <b:widget-setting name='link-1'>https://www.facebook.com/stockforexhub</b:widget-setting>
-               <b:widget-setting name='link-2'>https://www.facebook.com/stockforexhub</b:widget-setting>
+               <b:widget-setting name='link-2'>https://www.pinterest.com/StockForexHub/</b:widget-setting>
                <b:widget-setting name='link-0'>https://x.com/TradeSectionPK</b:widget-setting>
              </b:widget-settings>
              <b:includable id='main'>
